@@ -32,17 +32,21 @@ const Footer = styled.footer`
   box-shadow: ${({ theme }) => theme.shadows.sm};
 `;
 
-const Layout = () => {
+interface LayoutProps {
+  children?: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <LayoutContainer>
       <Header>
         <Navigation />
       </Header>
       <Main>
-        <Outlet />
+        {children || <Outlet />}
       </Main>
       <Footer>
-        <p>© {new Date().getFullYear()} Microbiologist Portfolio. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Jocelyn Zambrano. All rights reserved.</p>
       </Footer>
     </LayoutContainer>
   );

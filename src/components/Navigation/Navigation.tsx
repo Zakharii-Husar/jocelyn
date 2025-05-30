@@ -5,7 +5,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: ${({ theme }) => theme.layout.maxWidth};
   margin: 0 auto;
   width: 100%;
 `;
@@ -15,6 +15,19 @@ const Logo = styled(Link)`
   font-size: ${({ theme }) => theme.typography.fontSize.lg};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
   color: ${({ theme }) => theme.colors.primary.main};
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+`;
+
+const Name = styled.span`
+  font-size: ${({ theme }) => theme.typography.fontSize.lg};
+`;
+
+const Credentials = styled.span`
+  font-size: ${({ theme }) => theme.typography.fontSize.md};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.regular};
 `;
 
 const NavLinks = styled.div`
@@ -35,12 +48,15 @@ const NavLink = styled(Link)`
 const Navigation = () => {
   return (
     <Nav>
-      <Logo to="/">Microbiologist Portfolio</Logo>
+      <Logo to="/">
+        <Name>Jocelyn Zambrano</Name>
+        <Credentials>DVM, MSc</Credentials>
+      </Logo>
       <NavLinks>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/research">Research</NavLink>
+        <NavLink to="/">About Me</NavLink>
+        <NavLink to="/skills">Skills</NavLink>
+        <NavLink to="/projects">Projects</NavLink>
         <NavLink to="/publications">Publications</NavLink>
-        <NavLink to="/experience">Experience</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </NavLinks>
     </Nav>

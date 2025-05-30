@@ -11,10 +11,9 @@ const Form = styled.form`
   max-width: 600px;
   margin: 0 auto;
   padding: ${({ theme }) => theme.spacing.lg};
-  background: ${({ theme }) => theme.glassMorphism.background};
-  backdrop-filter: ${({ theme }) => theme.glassMorphism.backdropFilter};
-  border: ${({ theme }) => theme.glassMorphism.border};
-  border-radius: ${({ theme }) => theme.borderRadius.lg};
+  background: ${({ theme }) => theme.colors.background.light};
+  border-radius: ${({ theme }) => theme.borderRadius.md};
+  box-shadow: ${({ theme }) => theme.shadows.md};
 `;
 
 const FormGroup = styled.div`
