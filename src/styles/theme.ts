@@ -1,5 +1,3 @@
-import type { DefaultTheme } from 'styled-components';
-
 export const theme = {
   colors: {
     primary: {
@@ -11,11 +9,6 @@ export const theme = {
       main: '#F5F6FA',
       light: '#FFFFFF',
       dark: '#E4E6F0',
-    },
-    surface: {
-      main: 'rgba(255, 255, 255, 0.9)',
-      light: 'rgba(255, 255, 255, 0.95)',
-      dark: 'rgba(255, 255, 255, 0.85)',
     },
     text: {
       primary: '#2C3E50',
@@ -35,7 +28,6 @@ export const theme = {
     sm: '4px',
     md: '8px',
     lg: '16px',
-    xl: '24px',
   },
   typography: {
     fontFamily: {
@@ -51,7 +43,6 @@ export const theme = {
       xxl: '2rem',
     },
     fontWeight: {
-      light: 300,
       regular: 400,
       medium: 500,
       bold: 700,
@@ -64,17 +55,9 @@ export const theme = {
   },
   transitions: {
     default: '0.3s ease',
-    fast: '0.15s ease',
-    slow: '0.5s ease',
   },
-  gradients: {
-    primary: 'linear-gradient(135deg, #2C3E50 0%, #3498DB 100%)',
-    glass: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
-  },
-  glassMorphism: {
-    background: 'rgba(255, 255, 255, 0.7)',
-    backdropFilter: 'blur(10px)',
-    border: '1px solid rgba(255, 255, 255, 0.2)',
+  layout: {
+    maxWidth: '1200px',
   },
 } as const;
 
