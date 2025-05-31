@@ -10,6 +10,8 @@ import Publications from './pages/Publications/Publications';
 import Contact from './pages/Contact/Contact';
 
 function App() {
+  console.log('Theme primary color:', import.meta.env.VITE_THEME_PRIMARY_COLOR);
+  
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
